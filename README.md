@@ -22,7 +22,7 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/<your-username>/domex-api.git
+   git clone https://github.com/<coolDad7777>/domex-api.git
    cd domex-api
    ```
 2. **Install dependencies**
