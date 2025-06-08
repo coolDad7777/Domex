@@ -21,7 +21,7 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
 
 1. **Clone the repository**
 
-   * **Template (no fork needed):**
+   * **Template (no fork or auth needed):**
 
      ```bash
      git clone https://github.com/openrob/domex-api-starter.git domex-api
@@ -31,6 +31,24 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
 
      ```bash
      git clone https://github.com/<your-github-username>/domex-api-starter.git domex-api
+     cd domex-api
+     ```
+
+2. **If you encounter authentication errors** (password auth deprecated):
+
+   * **Using SSH keys** (recommended):
+
+     1. [Generate an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) and add it to GitHub
+     2. Clone via SSH:
+
+        ```bash
+        git clone git@github.com:openrob/domex-api-starter.git domex-api
+        cd domex-api
+        ```
+   * **Using a Personal Access Token (PAT)**:
+
+     ```bash
+     git clone https://<YOUR_GITHUB_TOKEN>@github.com/openrob/domex-api-starter.git domex-api
      cd domex-api
      ```
 
@@ -73,7 +91,22 @@ Returns a health-check message.
 
 **Response**
 
-```text
+```text[cooldad7777@archlinux ~]$ git clone https://github.com/<your-username>/domex-api.git
+cd domex-api
+bash: your-username: No such file or directory
+bash: cd: domex-api: No such file or directory
+[cooldad7777@archlinux ~]$ git clone https://github.com/<coolDad7777>/domex-api.git
+cd domex-api
+bash: coolDad7777: No such file or directory
+bash: cd: domex-api: No such file or directory
+[cooldad7777@archlinux ~]$ 
+
+
+
+
+
+
+
 Domex API – hit /domains for live data
 ```
 
