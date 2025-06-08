@@ -21,15 +21,18 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
 
 1. **Clone the repository**
 
-   ```bash
-   git clone https://github.com/<coolDad7777>/domex-api.git
-   cd domex-api
-   ```
-2. **Install dependencies**
+   * **Template (no fork needed):**
 
-   ```bash
-   npm install
-   ```
+     ```bash
+     git clone https://github.com/openrob/domex-api-starter.git domex-api
+     cd domex-api
+     ```
+   * **Or, if you’ve forked to your account (replace `<your-github-username>`):**
+
+     ```bash
+     git clone https://github.com/<your-github-username>/domex-api-starter.git domex-api
+     cd domex-api
+     ```
 
 ---
 
@@ -37,9 +40,10 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
 
 This service leverages MongoDB Atlas for persistence. Manage your secrets via environment variables.
 
-| Variable      | Description                              | Example                                                                              |
-| ------------- | ---------------------------------------- | ------------------------------------------------------------------------------------ |
-| `MONGODB_URI` | MongoDB connection string (including DB) | `mongodb+srv://user:pass@cluster0.xyz.mongodb.net/domex?retryWrites=true&w=majority` |
+| Variable      | Description                              | Example                                                                                                     |                                                                                      |
+| ------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `MONGODB_URI` | MongoDB connection string (including DB) | `mongodb+srv://cooldad7777:76qVwi1tBlGP0pAO@cluster0.an99cl5.mongodb.net/domex?retryWrites=true&w=majority` |                                                                                      |
+|               |                                          |                                                                                                             | `mongodb+srv://user:pass@cluster0.xyz.mongodb.net/domex?retryWrites=true&w=majority` |
 
 > **Pro Tip:** On Render.com, add `MONGODB_URI` under **Settings → Environment Variables**.
 
