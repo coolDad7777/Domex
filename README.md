@@ -33,24 +33,44 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
      git clone https://github.com/<your-github-username>/domex-api-starter.git domex-api
      cd domex-api
      ```
+   * **Or, clone directly with SSH (no password prompt):**
+
+     ```bash
+     git clone git@github.com:coolDad7777/domex-api-starter.git domex-api
+     cd domex-api
+     ```
 
 2. **If you encounter authentication errors** (password auth deprecated):
 
    * **Using SSH keys** (recommended):
 
-     1. [Generate an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) and add it to GitHub
-     2. Clone via SSH:
+     1. Generate an SSH key:
 
         ```bash
-        git clone git@github.com:openrob/domex-api-starter.git domex-api
+        ssh-keygen -t ed25519 -C "<your-email@example.com>"
+        ```
+     2. Start the ssh-agent and add your key:
+
+        ```bash
+        eval "$(ssh-agent -s)"
+        ssh-add ~/.ssh/id_ed25519
+        ```
+     3. Copy your public key to GitHub (see [https://github.com/settings/keys](https://github.com/settings/keys))
+     4. Clone:
+
+        ```bash
+        git clone git@github.com:coolDad7777/domex-api-starter.git domex-api
         cd domex-api
         ```
    * **Using a Personal Access Token (PAT)**:
 
-     ```bash
-     git clone https://<YOUR_GITHUB_TOKEN>@github.com/openrob/domex-api-starter.git domex-api
-     cd domex-api
-     ```
+     1. Create a PAT at [https://github.com/settings/tokens](https://github.com/settings/tokens)
+     2. Clone with your token in the URL:
+
+        ```bash
+        git clone https://<YOUR_GITHUB_TOKEN>@github.com/openrob/domex-api-starter.git domex-api
+        cd domex-api
+        ```
 
 ---
 
@@ -91,22 +111,7 @@ Returns a health-check message.
 
 **Response**
 
-```text[cooldad7777@archlinux ~]$ git clone https://github.com/<your-username>/domex-api.git
-cd domex-api
-bash: your-username: No such file or directory
-bash: cd: domex-api: No such file or directory
-[cooldad7777@archlinux ~]$ git clone https://github.com/<coolDad7777>/domex-api.git
-cd domex-api
-bash: coolDad7777: No such file or directory
-bash: cd: domex-api: No such file or directory
-[cooldad7777@archlinux ~]$ 
-
-
-
-
-
-
-
+```text
 Domex API – hit /domains for live data
 ```
 
