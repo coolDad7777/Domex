@@ -19,58 +19,38 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
 
 ## 🏗️ Installation
 
-1. **Clone the repository**
+If you haven’t already cloned or created a `domex-api` project folder, follow these steps:
 
-   * **Template (no fork or auth needed):**
+1. **Create or clone the project**
+
+   * **Clone the template** (no auth needed):
 
      ```bash
      git clone https://github.com/openrob/domex-api-starter.git domex-api
-     cd domex-api
      ```
-   * **Or, if you’ve forked to your account (replace `<your-github-username>`):**
+   * **Or fork & clone** to your own account (replace `<your-github-username>`):
 
      ```bash
      git clone https://github.com/<your-github-username>/domex-api-starter.git domex-api
-     cd domex-api
      ```
-   * **Or, clone directly with SSH (no password prompt):**
+   * **Or create from scratch**:
 
      ```bash
-     git clone git@github.com:coolDad7777/domex-api-starter.git domex-api
-     cd domex-api
+     mkdir domex-api && cd domex-api
+     # copy index.js and package.json into this folder (or run npm init)
      ```
 
-2. **If you encounter authentication errors** (password auth deprecated):
+2. **Enter the project directory**
 
-   * **Using SSH keys** (recommended):
+   ```bash
+   cd domex-api
+   ```
 
-     1. Generate an SSH key:
+3. **Install dependencies**
 
-        ```bash
-        ssh-keygen -t ed25519 -C "<your-email@example.com>"
-        ```
-     2. Start the ssh-agent and add your key:
-
-        ```bash
-        eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/id_ed25519
-        ```
-     3. Copy your public key to GitHub (see [https://github.com/settings/keys](https://github.com/settings/keys))
-     4. Clone:
-
-        ```bash
-        git clone git@github.com:coolDad7777/domex-api-starter.git domex-api
-        cd domex-api
-        ```
-   * **Using a Personal Access Token (PAT)**:
-
-     1. Create a PAT at [https://github.com/settings/tokens](https://github.com/settings/tokens)
-     2. Clone with your token in the URL:
-
-        ```bash
-        git clone https://<YOUR_GITHUB_TOKEN>@github.com/openrob/domex-api-starter.git domex-api
-        cd domex-api
-        ```
+   ```bash
+   npm install
+   ```
 
 ---
 
@@ -78,10 +58,10 @@ Built with Node.js, Express, and MongoDB Atlas, this API delivers real-time auct
 
 This service leverages MongoDB Atlas for persistence. Manage your secrets via environment variables.
 
-| Variable      | Description                              | Example                                                                                                     |                                                                                      |
-| ------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `MONGODB_URI` | MongoDB connection string (including DB) | `mongodb+srv://cooldad7777:76qVwi1tBlGP0pAO@cluster0.an99cl5.mongodb.net/domex?retryWrites=true&w=majority` |                                                                                      |
-|               |                                          |                                                                                                             | `mongodb+srv://user:pass@cluster0.xyz.mongodb.net/domex?retryWrites=true&w=majority` |
+| Variable      | Description                              | Example                                                                                                     |                                                                                                             |
+| ------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `MONGODB_URI` | MongoDB connection string (including DB) | `mongodb+srv://cooldad7777:76qVwi1tBlGP0pAO@cluster0.an99cl5.mongodb.net/domex?retryWrites=true&w=majority` | `mongodb+srv://cooldad7777:76qVwi1tBlGP0pAO@cluster0.an99cl5.mongodb.net/domex?retryWrites=true&w=majority` |
+|               |                                          |                                                                                                             | `mongodb+srv://user:pass@cluster0.xyz.mongodb.net/domex?retryWrites=true&w=majority`                        |
 
 > **Pro Tip:** On Render.com, add `MONGODB_URI` under **Settings → Environment Variables**.
 
@@ -89,17 +69,27 @@ This service leverages MongoDB Atlas for persistence. Manage your secrets via en
 
 ## ▶️ Usage
 
-Bring up the API in development or production mode:
+Make sure you are **inside the project root** (`domex-api` folder) where your `package.json` and `index.js` live.
 
-```bash
-# Development (auto-reloads on change)
-npm run dev
+1. **Install dependencies**
 
-# Production
-npm start
-```
+   ```bash
+   npm install
+   ```
 
-By default, the server listens on **port 3000** (or `process.env.PORT`).
+2. **Start the server**
+
+   ```bash
+   node index.js
+   ```
+
+> If you have **nodemon** installed globally for auto-reloads, you can run:
+>
+> ```bash
+> nodemon index.js
+> ```
+
+The server listens on **port 3000** by default (or `process.env.PORT` when deployed).
 
 ---
 
@@ -158,3 +148,46 @@ Please adhere to the existing code style and include relevant tests for your add
 ## 📄 License
 
 This project is open source under the **MIT License**. See [LICENSE](LICENSE) for details.
+
+---
+
+## 🛠️ Troubleshooting
+
+### Authentication Errors Cloning Repo
+
+* If you see **Permission denied (publickey)** when cloning via SSH:
+
+  1. Make sure you generated an SSH key on your machine by running:
+
+     ```bash
+     ssh-keygen -t ed25519 -C "your-email@example.com"
+     ```
+  2. Start the agent and add your key:
+
+     ```bash
+     eval "$(ssh-agent -s)"
+     ssh-add ~/.ssh/id_ed25519
+     ```
+  3. Copy the contents of `~/.ssh/id_ed25519.pub` and add it in **GitHub → Settings → SSH and GPG keys → New SSH key**.
+
+* Or use a Personal Access Token (PAT) with HTTPS if you prefer:
+
+  ```bash
+  git clone https://<YOUR_GITHUB_TOKEN>@github.com/openrob/domex-api-starter.git domex-api
+  ```
+
+### Cannot GET /
+
+If you visit the root URL and see **Cannot GET /**, remember to hit the `/domains` endpoint:
+
+```
+https://<your-service>.onrender.com/domains
+```
+
+---
+
+\[cooldad7777\@archlinux \~]\$ ssh-keygen -t ed25519 -C [berres.builders@gmail.com](mailto:berres.builders@gmail.com)
+
+Generating public/private ed25519 key pair.
+
+Enter file in which to save the key (/home/cooldad7777/.ssh/id\_ed25519):&#x20;
