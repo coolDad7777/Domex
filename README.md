@@ -58,10 +58,9 @@ If you haven’t already cloned or created a `domex-api` project folder, follow 
 
 This service leverages MongoDB Atlas for persistence. Manage your secrets via environment variables.
 
-| Variable      | Description                              | Example                                                                                                     |                                                                                                             |
-| ------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `MONGODB_URI` | MongoDB connection string (including DB) | `mongodb+srv://cooldad7777:76qVwi1tBlGP0pAO@cluster0.an99cl5.mongodb.net/domex?retryWrites=true&w=majority` | `mongodb+srv://cooldad7777:76qVwi1tBlGP0pAO@cluster0.an99cl5.mongodb.net/domex?retryWrites=true&w=majority` |
-|               |                                          |                                                                                                             | `mongodb+srv://user:pass@cluster0.xyz.mongodb.net/domex?retryWrites=true&w=majority`                        |
+| Variable      | Description                              | Example                                                                                                     |
+| ------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `MONGODB_URI` | MongoDB connection string (including DB) | `mongodb+srv://user:pass@cluster0.xyz.mongodb.net/domex?retryWrites=true&w=majority`                        |
 
 > **Pro Tip:** On Render.com, add `MONGODB_URI` under **Settings → Environment Variables**.
 
