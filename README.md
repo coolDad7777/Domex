@@ -184,10 +184,3 @@ If you visit the root URL and see **Cannot GET /**, remember to hit the `/domain
 https://<your-service>.onrender.com/domains
 ```
 
----
-
-\[cooldad7777\@archlinux \~]\$ ssh-keygen -t ed25519 -C [berres.builders@gmail.com](mailto:berres.builders@gmail.com)
-
-Generating public/private ed25519 key pair.
-
-Enter file in which to save the key (/home/cooldad7777/.ssh/id\_ed25519):&#x20;
